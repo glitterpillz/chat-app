@@ -84,6 +84,7 @@ const AuthForm = () => {
                         label='Name' 
                         register={register}
                         errors={errors}
+                        disabled={isLoading}
                     />
                     )}
                     <Input 
@@ -92,6 +93,7 @@ const AuthForm = () => {
                         type='email' 
                         register={register}
                         errors={errors}
+                        disabled={isLoading}
                     />
                     <Input 
                         id='password' 
@@ -99,6 +101,7 @@ const AuthForm = () => {
                         type='password' 
                         register={register}
                         errors={errors}
+                        disabled={isLoading}
                     />
                     <Button
                         disabled={isLoading}
@@ -177,7 +180,7 @@ const AuthForm = () => {
                         onClick={toggleVariant}
                         className="underline cursor-pointer"
                     >
-
+                        {variant === 'LOGIN' ? 'Create an account' : 'Login'}
                     </div>
                 </div>
             </div>
